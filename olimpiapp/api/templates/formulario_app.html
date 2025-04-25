@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro OLIMPIAPP</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="static/images/Logo.png" alt="Logo OLIMPIAPP" class="logo">
+        </div>
+        <h1>Registro del participante</h1>
+        <h3>Rellena el siguiente formulario para registrar al participante</h3>
+    </header>
+    
+    <form id="registroForm" action="/procesar_registro" method="POST">
+        <div class="checkbox-container">
+            <input type="checkbox" name="terminos" id="terminos" required>
+            <label for="terminos">Acepta los términos de privacidad</label>
+        </div>
+        
+        <!-- Datos del participante -->
+        <div class="form-section">
+            <div class="form-section-title">Datos del participante</div>
+            
+            <label for="name">Nombre</label>
+            <input type="text" name="nombre" id="name" required>
+            
+            <label for="surname">Apellidos</label>
+            <input type="text" name="apellidos" id="surname" required>
+            
+            <label for="birthdate">Fecha de nacimiento</label>
+            <input type="date" name="fechaNacimiento" id="birthdate" required>
+        </div>
+        
+        <!-- Datos del tutor legal -->
+        <div class="form-section">
+            <div class="form-section-title">Datos del tutor legal</div>
+            
+            <label for="tutor_name">Nombre</label>
+            <input type="text" name="nombre_tutor" id="tutor_name" required>
+            
+            <label for="tutor_surname">Apellidos</label>
+            <input type="text" name="apellidos_tutor" id="tutor_surname" required>
+            
+            <label for="relationship">Relación con el participante</label>
+            <select name="relacion" id="relationship" class="relationship-select" required>
+                <option value="">Selecciona una opción</option>
+                <option value="madre">Madre</option>
+                <option value="padre">Padre</option>
+                <option value="tutor_legal">Tutor legal</option>
+                <option value="otro">Otro</option>
+            </select>
+            
+            <label for="tutor_dni">DNI/NIE</label>
+            <input type="text" name="dni_tutor" id="tutor_dni" required>
+            
+            <label for="tutor_email">Correo electrónico</label>
+            <input type="email" name="email_tutor" id="tutor_email" required>
+            
+            <label for="tutor_phone">Teléfono de contacto</label>
+            <input type="tel" name="telefono_tutor" id="tutor_phone" required>
+        </div>
+        
+        <!-- Disciplinas -->
+        <div class="form-section">
+            <div class="form-section-title">Disciplinas</div>
+            <p class="disciplines-title">Selecciona las disciplinas (máximo 5):</p>
+            
+            <div class="discipline-option">
+                <input type="checkbox" name="disciplinas" id="disc1" value="4 en 1">
+                <label for="disc1">4 en 1</label>
+            </div>
+            
+            <div class="discipline-option">
+                <input type="checkbox" name="disciplinas" id="disc2" value="Ajedrez">
+                <label for="disc2">Ajedrez</label>
+            </div>
+            
+            <div class="discipline-option">
+                <input type="checkbox" name="disciplinas" id="disc3" value="Béisbol">
+                <label for="disc3">Béisbol</label>
+            </div>
+            
+            <div class="discipline-option">
+                <input type="checkbox" name="disciplinas" id="disc4" value="Bolos finlandeses">
+                <label for="disc4">Bolos finlandeses</label>
+            </div>
+            
+            <div class="discipline-option">
+                <input type="checkbox" name="disciplinas" id="disc5" value="Carrera de equilibrio">
+                <label for="disc5">Carrera de equilibrio</label>
+            </div>
+            
+            <div class="discipline-option">
+                <input type="checkbox" name="disciplinas" id="disc6" value="Carrera de obstáculos">
+                <label for="disc6">Carrera de obstáculos</label>
+            </div>
+            
+            <div class="discipline-option">
+                <input type="checkbox" name="disciplinas" id="disc7" value="Carrera de orientación deportiva">
+                <label for="disc7">Carrera de orientación deportiva</label>
+            </div>
+            
+            <div class="discipline-option">
+                <input type="checkbox" name="disciplinas" id="disc8" value="Carrera de sacos">
+                <label for="disc8">Carrera de sacos</label>
+            </div>
+            
+            <div class="discipline-option">
+                <input type="checkbox" name="disciplinas" id="disc9" value="Circuito de lanzamiento de precisión">
+                <label for="disc9">Circuito de lanzamiento de precisión</label>
+            </div>
+            
+            <div class="discipline-option">
+                <input type="checkbox" name="disciplinas" id="disc10" value="Colpbol">
+                <label for="disc10">Colpbol</label>
+            </div>
+            
+            <div class="discipline-option">
+                <input type="checkbox" name="disciplinas" id="disc11" value="Frontenis">
+                <label for="disc11">Frontenis</label>
+            </div>
+            
+            <div class="discipline-option">
+                <input type="checkbox" name="disciplinas" id="disc12" value="Mini fútbol 3x3">
+                <label for="disc12">Mini fútbol 3x3</label>
+            </div>
+            
+            <div class="discipline-option">
+                <input type="checkbox" name="disciplinas" id="disc13" value="Natación">
+                <label for="disc13">Natación</label>
+            </div>
+            
+            <div class="discipline-option">
+                <input type="checkbox" name="disciplinas" id="disc14" value="Netball">
+                <label for="disc14">Netball</label>
+            </div>
+            
+            <div class="discipline-option">
+                <input type="checkbox" name="disciplinas" id="disc15" value="Pañuelito">
+                <label for="disc15">Pañuelito</label>
+            </div>
+            
+            <div class="discipline-option">
+                <input type="checkbox" name="disciplinas" id="disc16" value="Pichi">
+                <label for="disc16">Pichi</label>
+            </div>
+            
+            <p class="disciplines-note">Puedes elegir hasta un máximo de 5 disciplinas</p>
+        </div>
+        
+        <!-- Consentimiento adicional para menores -->
+        <div class="form-section">
+            <div class="checkbox-container">
+                <input type="checkbox" name="consentimiento_tutor" id="tutor_consent" required>
+                <label for="tutor_consent">Como tutor legal, doy mi consentimiento para la participación del menor en las actividades seleccionadas</label>
+            </div>
+        </div>
+        
+        <button type="submit">Registrar</button>
+    </form>
+    
+    <script>
+        // Script para limitar la selección a un máximo de 5 disciplinas
+        document.addEventListener('DOMContentLoaded', function() {
+            const checkboxes = document.querySelectorAll('input[name="disciplinas"]');
+            
+            checkboxes.forEach(function(checkbox) {
+                checkbox.addEventListener('change', function() {
+                    const checked = document.querySelectorAll('input[name="disciplinas"]:checked');
+                    
+                    if (checked.length > 5) {
+                        this.checked = false;
+                        alert('Solo puedes seleccionar un máximo de 5 disciplinas.');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
